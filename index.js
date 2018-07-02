@@ -1,15 +1,8 @@
-onst form = document.querySelector('form#flickForm')
+const button = document.querySelector('button')
 
-const updateHeading = function(ev) {
-  ev.preventDefault()
-  const f = ev.target
-
-  const flickName = f.flickName.value
-
-  const list = document.querySelector('#flicks')
-  list.innerHTML += `<li>${flickName}</li>`
-
-  f.reset()
+const changeHeading = function() {
+  const heading = document.querySelector('p.fancy')
+  heading.textContent = 'Scorpion'
 }
 
-form.addEventListener('submit', updateHeading)
+button.addEventListener('click', changeHeading)
